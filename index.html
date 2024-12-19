@@ -25,7 +25,7 @@
     <button onclick="window.print()">
       Print me!
     </button>
-    <a href="javascript:window.print()" onclick="window.ReactNativeWebView.postMessage(JSON.stringify({action:'print', url: 'https://www.gevme.com/page/attendance-1'})); return false;">Print this page</a>
+    <a href="javascript:window.print()" onclick="if(window.ReactNativeWebView){window.ReactNativeWebView.postMessage(JSON.stringify({action:'print', url: 'https://www.gevme.com/page/attendance-1'})); return false;"}>Print this page</a>
     <div class="tall-div">
       If we correctly print entire page, rather than just the visible viewport,
       this entire rectangle should be visible on the printed page.
